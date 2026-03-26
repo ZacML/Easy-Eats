@@ -5,3 +5,24 @@ body {
 * {
   font-family: sans-serif;
 }
+
+// botões
+.btn-mostrar-senha {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  color: #ff6b00;
+  font-weight: bold;
+
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-mostrar-senha:hover {
+  text-decoration: underline;
+}
