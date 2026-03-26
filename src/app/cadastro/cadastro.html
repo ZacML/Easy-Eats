@@ -52,21 +52,31 @@
 
         <div class="password-field">
           <label>Senha</label>
-          <input type="password" placeholder="••••••••" formControlName="senha" />
-        </div>
-        <button type="button" (click)="togglePassword()" class="toggle-password">
+          <div class="input-wrapper">
+            <input
+              [type]="showPassword ? 'text' : 'password'"
+              placeholder="••••••••"
+              formControlName="senha"
+            />
+            <button type="button" (click)="togglePassword()" class="toggle-btn">
               {{ showPassword ? 'Ocultar' : 'Mostrar' }}
             </button>
+          </div>
+        </div>
 
         <div class="password-field">
           <label>Confirmar Senha</label>
-          <input type="password" placeholder="••••••••" formControlName="confirmarSenha" 
-          />
-           <button type="button" (click)="togglePasswordDown()" class="toggle-password-2">
+          <div class="input-wrapper">
+            <input
+              [type]="showPasswordDown ? 'text' : 'password'"
+              placeholder="••••••••"
+              formControlName="confirmarSenha"
+            />
+            <button type="button" (click)="togglePasswordDown()" class="toggle-btn">
               {{ showPasswordDown ? 'Ocultar' : 'Mostrar' }}
             </button>
+          </div>
         </div>
-       
 
         <div class="file-group">
           <label>Imagem de Perfil:</label>

@@ -103,31 +103,35 @@ input:focus {
   transition: background 0.3s;
   margin-top: 15px;
 }
-
-.toggle-password {
-  position: absolute;
-  right: 35%;
-  top: 93%;
-  background: none;
-  border: none;
-  color: #ff6b00;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0;
+/* Container que agrupa o input e o botão */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.toggle-password-2 {
+/* Ajuste no input para o texto não bater no botão */
+.input-wrapper input {
+  padding-right: 70px; /* Abre espaço na direita para o botão */
+  width: 100%;
+}
+
+/* Novo estilo único para os botões de mostrar/ocultar */
+.toggle-btn {
   position: absolute;
-  right: 35%;
-  top: 106.5%;
+  right: 12px;
   background: none;
   border: none;
   color: #ff6b00;
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  padding: 0;
+  padding: 5px;
+  z-index: 2;
+  /* Remove margens ou posicionamentos antigos */
+  transform: none;
+  top: auto;
 }
 
 .cadastro-button:hover {
