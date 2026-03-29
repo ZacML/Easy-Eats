@@ -27,51 +27,56 @@
   <button class="btn">+ Novo Pedido</button>
 
 
-<div class="lista">
-  <h3>Últimos Pedidos</h3>
+  <div class="lista">
+    <h3>Últimos Pedidos</h3>
 
-  <div class="item">
-    <span>#001 João</span>
-    <span>R$ 70.00 <span class="status">preparando</span></span>
+    <div class="item">
+      <span>#001 João</span>
+      <span>R$ 70.00 <span class="status">preparando</span></span>
+    </div>
+
+    <div class="item">
+      <span>#002 Isaque</span>
+      <span>R$ 29.00 <span class="status">preparando</span></span>
+    </div>
+
+    <div class="item">
+      <span>#003 Douglas</span>
+      <span>R$ 124.90 <span class="status">pronto</span></span>
+    </div>
+
+    <div class="item">
+      <span>#004 Jean</span>
+      <span>R$ 150.00 <span class="status">pronto</span></span>
+    </div>
   </div>
 
-  <div class="item">
-    <span>#002 Isaque</span>
-    <span>R$ 29.00 <span class="status">preparando</span></span>
-  </div>
+  <!-- Menu inferior com ícones -->
+  <div class="bottom-nav">
+    <button type="button" routerLink="/dashboard" routerLinkActive="active">
+      <i class="bi bi-house-door"></i>
+      <span>Painel</span>
+    </button>
 
-  <div class="item">
-    <span>#003 Douglas</span>
-    <span>R$ 124.90 <span class="status">pronto</span></span>
-  </div>
+    <button type="button">
+      <i class="bi bi-cart"></i>
+      <span>Pedido</span>
+    </button>
 
-  <div class="item">
-    <span>#004 Jean</span>
-    <span>R$ 150.00 <span class="status">pronto</span></span>
-  </div>
-</div>
+    <button type="button">
+      <i class="bi bi-list-task"></i>
+      <span>Fila</span>
+    </button>
 
-<!-- Menu inferior com ícones -->
-<div class="bottom-nav">
-  <button type="button">
-    <i class="bi bi-house-door"></i>
-    <span>Painel</span>
-  </button>
-  <button type="button">
-    <i class="bi bi-cart"></i>
-    <span>Pedido</span>
-  </button>
-  <button type="button">
-    <i class="bi bi-list-task"></i>
-    <span>Fila</span>
-  </button>
-  <button type="button">
-    <i class="bi bi-clock-history"></i>
-    <span>Histórico</span>
-  </button>
-  <button type="button">
-    <i class="bi bi-three-dots"></i>
-    <span>Mais</span>
-  </button>
-</div>
+    <button type="button">
+      <i class="bi bi-clock-history"></i>
+      <span>Histórico</span>
+    </button>
+
+    <button type="button" routerLink="/perfil-admin" routerLinkActive="active">
+      <i class="bi bi-person-circle"></i>
+      <span>Perfil</span>
+    </button>
+    
+  </div>
 </div>
