@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="orders-box">
+
+    <h1 class="titulo">Fila de Pedidos</h1>
+
+    <div class="fila-container">
+      
+      <div class="card-pedido preparando">
+        <div class="card-topo">
+          <span class="id-cliente">#001 <strong>João</strong></span>
+          <span class="status-tag"> Preparando</span>
+        </div>
+
+        <div class="itens-pedido">
+          <div class="item"><span> Hambúrguer Clássico x2</span> <span>R$ 44.00</span></div>
+          <div class="item"><span> Batata Frita x1</span> <span>R$ 12.00</span></div>
+          <div class="item"><span> Coca-Cola x2</span> <span>R$ 14.00</span></div>
+        </div>
+
+        <div class="card-acoes">
+          <span class="total">R$ 70.00</span>
+          <button type="button" class="btn-concluir">Marcar Pronto</button>
+        </div>
+      </div>
+
+      <div class="card-pedido aguardando">
+        <div class="card-topo">
+          <span class="id-cliente">#002 <strong>Maria</strong></span>
+          <span class="status-tag"> Aguardando</span>
+        </div>
+
+        <div class="itens-pedido">
+          <div class="item"><span> X-Bacon x1</span> <span>R$ 28.00</span></div>
+          <div class="item"><span> Onion Rings x1</span> <span>R$ 14.00</span></div>
+        </div>
+
+        <div class="card-acoes">
+          <span class="total">R$ 42.00</span>
+          <button type="button" class="btn-preparar">Iniciar Preparo</button>
+        </div>
+      </div>
+
+      <div class="secao-prontos">
+        <h3>Prontos</h3>
+        <div class="card-pedido pronto-linha">
+          <span>#003 <strong>Carlos</strong></span>
+          <strong>R$ 66.00</strong>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- NAVBAR (DO DASHBOARD) -->
+<div class="bottom-nav">
+  
+  <button type="button" routerLink="/dashboard">
+    <i class="bi bi-house-door"></i>
+    <span>Painel</span>
+  </button>
+
+  <button type="button">
+    <i class="bi bi-cart"></i>
+    <span>Pedido</span>
+  </button>
+
+  <button type="button" routerLink="/fila">
+    <i class="bi bi-list-task"></i>
+    <span>Fila</span>
+  </button>
+
+  <button type="button">
+    <i class="bi bi-clock-history"></i>
+    <span>Histórico</span>
+  </button>
+
+  <button type="button" routerLink="/perfil-admin">
+    <i class="bi bi-person-circle"></i>
+    <span>Perfil</span>
+  </button>
+
+</div>
