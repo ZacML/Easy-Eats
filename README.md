@@ -76,6 +76,16 @@ nome padrão dos arquivos deve ser escrita em padrão camelCase.
 
 EXEMPLO DE ARQUIVO: `exemploArquivo.ts`
 
+## Docker
 
+Este projeto tem `Dockerfile` (build Angular + nginx) e `nginx.conf.template` (proxy `/api` -> backend).
+A orquestração completa (banco, backend e frontend) fica no repositório do backend:
+[Easy-Eats-Api-2](https://github.com/ZacML/Easy-Eats-Api-2). Veja o README de lá e rode
+`docker compose up -d --build`.
 
+Imagem isolada:
 
+```bash
+docker build -t easy-eats-web .
+docker run -p 4200:80 -e BACKEND_URL=http://HOST_DA_API:8080 easy-eats-web
+```

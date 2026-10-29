@@ -1,0 +1,20 @@
+server {
+    listen 80;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # /api/auth/login  ->  ${BACKEND_URL}/auth/login   (a barra final remove o prefixo /api)
+    location /api/ {
+        proxy_pass ${BACKEND_URL}/;
+        # $http_host preserva a porta (ex.: localhost:4200). Com $host o Spring veria
+        # Origin != Host e trataria POST/PUT/DELETE como CORS, respondendo 403.
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    # SPA: qualquer rota do Angular cai no index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
